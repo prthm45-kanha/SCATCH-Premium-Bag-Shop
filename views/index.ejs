@@ -1,6 +1,6 @@
 <%- include('./partials/header') %>
 
-    <% if(error.length > 0){ %>
+    <% if( error.length > 0){ %>
         <div class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 rounded-md bg-red-500">
             <span class="inline-block mt-1 mb-1 text-white">
                 <%= error %>
@@ -39,7 +39,9 @@
                                 type="password" placeholder="Password" name="password">
                             <input class="px-5 block rounded-full py-3 mt-2 bg-blue-500 text-white" type="submit"
                                 value="Login">
+                                
                         </form>
+                       
                     </div>
                 </div>
             </div>

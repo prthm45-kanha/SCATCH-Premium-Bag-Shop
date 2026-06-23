@@ -1,6 +1,6 @@
 const jwt=require('jsonwebtoken');
 
-const userModel=require('../models/user-model');
+const userModel=require('../models/user-model'); 
 
 module.exports= async (req,res,next)=>{
     if(!req.cookies.token){
@@ -19,8 +19,7 @@ module.exports= async (req,res,next)=>{
         next();
 
     } catch(err){
-       console.log(err);
-    req.flash("error", err.message);
-    return res.redirect('/');
+        req.flash("error","something went wrong");
+        res.redirect('/');
     }
 };

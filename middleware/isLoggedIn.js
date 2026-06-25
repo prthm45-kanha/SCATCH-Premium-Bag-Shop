@@ -18,7 +18,7 @@ module.exports= async (req,res,next)=>{
 
         next();
 
-    } catch(err){
+    } catch(error){
         req.flash("error","something went wrong");
         res.redirect('/');
     }
